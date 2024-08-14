@@ -1,0 +1,27 @@
+<%- include("partials/header.ejs")%>
+      <div class="container d-flex flex-column align-center px-4 pt-0 my-5 text-center vw-100 h-100">
+      <h1 class="mb-5 display-5 fw-bold text-body-emphasis">Post Your Blog</h1>
+      <div class="w-100">
+        <div class="d-block"> 
+
+          <% if (locals.errorMessage) { %>
+              <div class="alert alert-danger" role="alert">
+                <%= errorMessage %>
+              </div>
+            <%}%>
+            
+            <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary" action="/submit" method="POST">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="title">
+                <label for="floatingInput">Title</label>
+              </div>
+              <div class="form-floating mb-3">
+                <textarea class="form-control" id="floatingTextarea" placeholder="Enter your text here" style="height: 270px; max-height: 300px; overflow-y: auto;" name="content"></textarea>
+                <label for="floatingPassword">Blog content here...</label>
+              </div>
+              <button class="w-100 btn btn-lg btn-primary" type="submit">Post</button>
+            </form>
+        </div>
+      </div>
+    </div>
+<%- include("partials/footer.ejs")%>
