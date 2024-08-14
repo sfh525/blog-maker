@@ -1,4 +1,4 @@
-# How to run my blog website on your machine:
+# How to Run My Blog Website on Your Machine
 Requirements: 
 * Make sure you have node.js installed in your system. 
 * (Optional) install nodemon on your machine to help you run the code. Download here: https://www.npmjs.com/package/nodemon
